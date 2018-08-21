@@ -2,15 +2,15 @@ rocketShip daOne=new rocketShip(240,600);
 backStars [] backGround=new backStars[300];
 public void setup(){
   size(480,640);
+  background(0); 
   for(int i=0;i<backGround.length;i++)
     backGround[i]=new backStars();
 }
 public void draw(){
-  background(0); 
-  daOne.show();
   for(int i=0;i<backGround.length;i++)
     backGround[i].show();
-  daOne.keyMove(); 
+  daOne.show();
+  //daOne.keyMove(); 
 }
 public class rocketShip{
   int myX, myY;
@@ -20,16 +20,22 @@ public class rocketShip{
   }
   public void show(){
     fill(254,0,223);
+    stroke(254,0,223);
     triangle(myX,myY-5,myX-10,myY+5,myX+10,myY+5);
   }
-  public void keyMove(){
+  /*public void keyMove(){
     if(keyPressed&&key=='a')
       myX-=10;
     if(keyPressed&&key=='d')
       myX+=10;
-  }
+  }*/
 }
 public class alienShip{
+  int myX, myY;
+  public alienShip(int x, int y){
+    myX=x;
+    myY=y;
+  }
 }
 public class scoreCounter{
 }
@@ -41,6 +47,7 @@ public class backStars{
   }
   public void show(){
     fill(255,255,0);
+    stroke(0,0,0);
     ellipse(starX,starY,5,5);
   }
 }
