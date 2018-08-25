@@ -10,7 +10,7 @@ public void draw(){
   for(int i=0;i<backGround.length;i++)
     backGround[i].show();
   daOne.show();
-  //daOne.keyMove(); 
+  daOne.keyMove(); 
 }
 public class rocketShip{
   int myX, myY;
@@ -23,12 +23,12 @@ public class rocketShip{
     stroke(254,0,223);
     triangle(myX,myY-5,myX-10,myY+5,myX+10,myY+5);
   }
-  /*public void keyMove(){
+  public void keyMove(){
     if(keyPressed&&key=='a')
       myX-=10;
     if(keyPressed&&key=='d')
       myX+=10;
-  }*/
+  }
 }
 public class alienShip{
   int myX, myY;
