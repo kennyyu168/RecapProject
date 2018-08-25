@@ -1,16 +1,16 @@
 rocketShip daOne=new rocketShip(240,600);
 backStars [] backGround=new backStars[300];
 public void setup(){
-  size(480,640);
-  background(0); 
+  size(480,640); 
   for(int i=0;i<backGround.length;i++)
     backGround[i]=new backStars();
 }
 public void draw(){
+  background(0);
   for(int i=0;i<backGround.length;i++)
     backGround[i].show();
   daOne.show();
-  daOne.keyMove(); 
+  daOne.keyMove();
 }
 public class rocketShip{
   int myX, myY;
